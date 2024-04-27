@@ -1,0 +1,963 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: black;
+  justify-content: center;
+  
+}
+
+.logoDinero{
+position: absolute;
+width: 80px;
+height: 15px;
+left: 48px;
+top: 30px;
+}
+
+nav{
+position: absolute;
+width: 1098px;
+height: 30px;
+left: 188px;
+top: 0px;
+}
+
+nav ul {
+    text-align: right;
+    flex: 3;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 9px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Outfit" ;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 30px;
+}
+nav ul li a:hover {
+  color:   #7ED359;
+  ;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  transition: 0.6s;
+  background-color:  #7ED359;
+  ;
+}
+/* nav ul li a:hover::after {
+  width: 100%;
+} */
+
+
+h1 {
+    position: absolute;
+    width: 486px;
+    height: 213px;
+    left: 188px;
+    top: 177px;
+    font-family: "Outfit" ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 100%;
+    /* or 75px */
+    text-transform: capitalize;
+    
+    color: #D4EDB6;
+}
+
+p {
+    position: absolute;
+    width: 486px;
+    height: 92px;
+    left: 188px;
+    top: 451px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    
+    color: #FFFFFF;
+}
+
+img {
+
+    position: absolute;
+    width: 518px;
+    height: 506px;
+    left: 853px;
+    top: 167px;
+    
+    background: url(3D payment deadline.png);
+    }
+    
+.ellipse1 {
+ 
+position: absolute;
+width: 200px;
+height: 316px;
+left: 1300px;
+top: 573px;
+
+background: rgba(105, 170, 65, 0.8);
+filter: blur(140px);
+
+}
+
+.ellipse2 {
+  
+
+position: absolute;
+width: 427px;
+height: 416px;
+left: 255px;
+top: -432px;
+
+background: rgba(105, 170, 65, 0.8);
+filter: blur(140px);
+
+}
+
+.containerSU {
+
+  position: absolute;
+  width: 260px;
+  height: 73px;
+  left: 188px;
+  top: 594px;
+  font-family: 'Outfit';
+  font-style: SemiBold;
+  font-size: 20px;
+  color : #FFFFFF;
+  background: #7ED359;
+  border-radius: 83px;
+  
+  }
+
+.containerL{
+z-index: 1;
+box-sizing: border-box;
+position: absolute;
+width: 260px;
+height: 73px;
+left: 472px;
+top: 594px;
+font-family: 'Outfit';
+font-style: SemiBold;
+font-size: 20px;
+color : #FFFFFF;
+background: #070707;
+border: 1px solid #7ED359;
+border-radius: 83px;
+}
+
+
+
+h2 {
+
+position: absolute;
+width: 525px;
+height: 213px;
+left: 828px;
+top: 1000px;
+
+/* H2 */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 100%;
+/* or 50px */
+text-transform: capitalize;
+
+color: #D4EDB6;
+}
+
+
+.financeP {
+position: absolute;
+width: 489.73px;
+height: 92px;
+left: 828px;
+top: 1198px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+color: #FFFFFF;
+} 
+
+.financeImg {
+  position: absolute;
+  width: 523px;
+  height: 523px;
+  left: 188px;
+  top: 900px;
+  
+  background: url(Icon 08-02.png);
+}
+
+.ellipse3{
+/* Ellipse 4 */
+
+position: absolute;
+width: 264px;
+height: 250px;
+left: -162px;
+top: 1353px;
+
+background: #7898BE;
+filter: blur(150px);
+}
+
+h3 {
+  /* Discover Your Financial Destiny and let’s Achieve Your Goals together!! */
+
+position: absolute;
+width: 521px;
+height: 213px;
+left: 188px;
+top: 1708px;
+
+/* H2 */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 100%;
+/* or 50px */
+text-transform: capitalize;
+
+color: #D4EDB6;
+
+}
+
+.discoverP{
+  /* Through our app, we facilitate goal-setting by providing intuitive tools to define and track your financial objectives. Receive timely alerts to keep you on track and celebrate your milestones with symbolic rewards upon achieving your goals ! */
+
+position: absolute;
+width: 486px;
+height: 115px;
+left: 188px;
+top: 1967px;
+
+/* body text */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+color: #FFFFFF;
+
+
+}
+
+.discoverImg {
+  /* Image */
+
+position: absolute;
+width: 525px;
+height: 493px;
+left: 828px;
+top: 1743px;
+
+background: url(Icon 17-02.png);
+
+}
+
+.ellipse4{
+  /* Ellipse 5 */
+
+position: absolute;
+width: 200px;
+height: 316px;
+left: 1300px;
+top: 2253px;
+
+background: #AD6C56;
+filter: blur(150px);
+
+}
+
+.subheading{
+  /* testemonials */
+
+position: absolute;
+width: 228px;
+height: 32px;
+left: calc(50% - 228px/2);
+top: 2474px;
+
+/* Subheader */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 32px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #D4EDB6;
+
+}
+
+
+.heading-secondary{
+  /* Read what others have to say */
+
+position: absolute;
+width: 532px;
+height: 125px;
+left: calc(50% - 532px/2);
+top: 2473px;
+
+/* H2 */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 100%;
+/* or 50px */
+text-align: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+}
+
+
+.rectangle1{
+  /* emily */
+
+position: absolute;
+width: 345px;
+height: 296px;
+left: 188px;
+top: 2768px;
+
+background: rgba(45, 47, 44, 0.8);
+border-radius: 20px;
+}
+.rectangle2{
+  /* Michael*/
+
+position: absolute;
+width: 345px;
+height: 296px;
+left: 548px;
+top: 2768px;
+
+background: rgba(45, 47, 44, 0.8);
+border-radius: 20px;
+}
+
+.rectangle3{
+  /* John */
+
+position: absolute;
+width: 345px;
+height: 296px;
+left: 908px;
+top: 2768px;
+
+background: rgba(45, 47, 44, 0.8);
+border-radius: 20px;
+
+}
+
+.EmilyImg{
+  /* Mask group */
+z-index: 1;
+position: absolute;
+width: 105px;
+height: 105px;
+left: 313px;
+top: 2713px;
+
+}
+
+
+.EmilyTestimonial{
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 150px;
+left: 180px;
+top: 2870px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 119%;
+/* or 15px */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: lowercase;
+
+color: #FFFFFF;
+
+
+
+}
+
+.Customer1{
+  /* Emily Williams */
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 32px;
+left: 223px;
+top: 2808px;
+
+/* Subheader */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 32px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.MichaelImg{
+  /* Mask group */
+z-index: 1;
+position: absolute;
+width: 105px;
+height: 105px;
+left: 662px;
+top: 2713px;
+
+}
+
+.MichaelTestimonial{
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 150px;
+left: 544px;
+top: 2872px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 119%;
+/* or 15px */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: lowercase;
+
+color: #FFFFFF;
+
+}
+
+.Customer2{
+  /* Michael Johnson */
+z-index: 1;
+position: absolute;
+width: 400px;
+height: 32px;
+left: 525px;
+top: 2808px;
+
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 32px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.JohnImg{
+  /* Mask group */
+z-index: 1;  /*for overlaying */
+position: absolute;
+width: 105px;
+height: 105px;
+left: 1028px;
+top: 2715px;
+
+}
+
+.JohnTestimonial{
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 130px;
+left: 898px;
+top: 2872px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 119%;
+/* or 15px */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: lowercase;
+
+color: #FFFFFF;
+
+}
+
+.Customer3{
+  /* John Smith */
+z-index: 1;
+position: absolute;
+width: 200px;
+height: 32px;
+left: 983px;
+top: 2808px;
+
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 32px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.rectangle4{
+  /* Rectangle 4 */
+
+position: absolute;
+width: 1065px;
+height: 369px;
+left: calc(50% - 1065px/2 - 0.5px);
+top: 3451px;
+
+background: linear-gradient(103.43deg, #5F8CC0 6.01%, #529D58 97.11%);
+border-radius: 30px;
+
+}
+
+.head2{
+  /* are you ready? */
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 32px;
+left: calc(50% - 270px/2 - 1px);
+top: 3474px;
+
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 32px;
+
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.subhead2{
+z-index: 1;
+position: absolute;
+width: 577px;
+height: 112px;
+left: 491px;
+top: 3536px;
+
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 100%;
+
+text-align: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+}
+
+.containerD{
+  /* download button */
+z-index: 1;
+position: absolute;
+width: 260px;
+height: 73px;
+left: 630px;
+top: 3728px;
+font-family: 'Outfit';
+font-style: SemiBold;
+font-size: 20px;
+color : #FFFFFF;
+background: #000000;
+border-radius: 83px;
+
+}
+
+.logo{
+  /* dinero */
+
+position: absolute;
+width: 80px;
+height: 15px;
+left: 48px;
+top: 4101px;
+
+}
+
+/* Contact us adress phone email */
+.footer-heading1{
+position: absolute;
+width: 165px;
+height: 146px;
+left: 528px;
+top: 4090px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 19px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.address{
+position: absolute;
+width: 165px;
+height: 146px;
+left: 528px;
+top: 4130px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 200;
+font-size: 10px;
+line-height: 17px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.phone {
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 343px;
+  top: 3700px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.mail{
+position: absolute;
+width: 165px;
+height: 146px;
+left: 343px;
+top: 3730px;
+font-family: 'Outfit';
+text-decoration: none;
+
+font-style: normal;
+font-weight: 200;
+font-size: 10px;
+line-height: 17px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.footer-heading2{
+  /* Account create account sign in ios app Android app */
+
+ position: absolute;
+ width: 189px;
+ height: 161px;
+ left: 601px;
+ top: 4090px;
+
+ font-family: 'Outfit';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 15px;
+ line-height: 19px;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+
+ color: #FFFFFF;
+
+}
+
+.footer-linkCREATE{
+position: absolute;
+width: 165px;
+height: 146px;
+left: 544px;
+top: 4140px;
+font-family: 'Outfit';
+text-decoration: none;
+
+font-style: normal;
+font-weight: 200;
+font-size: 10px;
+line-height: 17px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.footer-linkSIGN{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 483px;
+  top: 4170px;
+  font-family: 'Outfit';
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer-linkIOS{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 484px;
+  top: 4200px;
+  font-family: 'Outfit';
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;  
+}
+
+.footer-linkAND{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 520px;
+  top: 4230px;
+  text-decoration: none;
+
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;  
+}
+
+.footer-heading3{
+
+ position: absolute;
+ width: 116px;
+ height: 151px;
+ left: 867px;
+ top: 4090px;
+
+ font-family: 'Outfit';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 15px;
+ line-height: 19px;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+ color: #FFFFFF;
+}
+
+.footer-linkABOUT{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 793px;
+  top: 4140px;
+  font-family: 'Outfit';
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer-linkFOR{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 785px;
+  top: 4170px;
+  text-decoration: none;
+
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF; 
+}
+
+.footer-linkP{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 764px;
+  top: 4200px;
+  font-family: 'Outfit';
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF; 
+}
+
+.footer-linkC{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 758px;
+  top: 4230px;
+  font-family: 'Outfit';
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF; 
+}
+
+.footer-heading4{
+ 
+ position: absolute;
+ width: 131px;
+ height: 131px;
+ left: 1088px;
+ top: 4090px;
+ text-decoration: none;
+
+ font-family: 'Outfit';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 15px;
+ line-height: 19px;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+ color: #FFFFFF;
+
+}
+
+.footer-linkH{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 1005px;
+  top: 4140px;
+  font-family: 'Outfit';
+  font-style: normal;
+  text-decoration: none;
+
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer-linkPR{
+  position: absolute;
+  width: 165px;
+  height: 146px;
+  left: 1028px;
+  top: 4170px;
+  font-family: 'Outfit';
+  font-style: normal;
+  text-decoration: none;
+
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.DOWN{
+ position: absolute;
+ width: 1519px;
+ height: 10px;
+ left: 0px;
+ top: 4367px;
+
+}

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body{
+position: relative;
+width: 800px;
+height: 600px;
+top: 55px;
+left: 400px ;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #7ED359;
+background-blend-mode: normal, darken;
+box-shadow: 7px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.whiteREctangle{   
+/* Rectangle 33 */
+align-items: center; /* Center vertically */
+justify-content: center;
+position: absolute;
+width: 517.62px;
+height: 599px;
+left: 281.81px;
+top: 3.36px;
+
+background: #FFFFFF;
+border-radius: 20.1508px 0px 0px 20.1508px;
+transform: rotate(-0.28deg);
+
+}
+
+.blobs{
+z-index: ;
+align-items: center; /* Center vertically */
+justify-content: center;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 1px;
+top: 2.59px;
+}
+
+h1{
+align-items: center; /* Center vertically */
+justify-content: center;
+z-index: 1;
+position: absolute;
+width: 200px;
+height: 25px;
+left: 453px;
+top: 122.59px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 20.1508px;
+line-height: 25px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+transform: rotate(-0.28deg);
+
+}
+
+.mailInput{
+align-items: center; /* Center vertically */
+justify-content: center;
+/* input field */
+z-index: 1;
+box-sizing: border-box;
+
+position: absolute;
+width: 409.06px;
+height: 32.24px;
+left: 307.05px;
+top: 213.07px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+}
+
+.mail{
+    
+z-index: 2;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5.03769px 18.1357px;
+
+position: absolute;
+width: 37.19px;
+height: 20.08px;
+left: 320.88px;
+top: 202.93px;
+
+background: #FFFFFF;
+transform: rotate(-0.28deg);
+/* Email */
+
+width: 29px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.passwordInput{
+z-index: 1;
+box-sizing: border-box;
+
+position: absolute;
+width: 409.06px;
+height: 32.24px;
+left: 308.05px;
+top: 269.07px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+}
+
+.password{
+z-index: 2;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5.03769px 18.1357px;
+gap: 7.56px;
+
+position: absolute;
+width: 57.93px;
+height: 20.08px;
+left: 317.07px;
+top: 258.95px;
+
+background: #FFFFFF;
+transform: rotate(-0.28deg);
+/* Password */
+
+width: 52px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.create{
+    /* Button */
+
+/* Auto layout */
+z-index: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 5.04px;
+
+position: absolute;
+width: 409.06px;
+height: 34.76px;
+left: 307.95px;
+top: 342.08px;
+
+transform: rotate(-0.28deg);
+
+border: 2px solid #fff;
+box-shadow: 0px 15px 35px rgba(0,0,0,.1), inset 0px -20px 30px rgba(255,255,255,.2);
+transition: all .2s ease-in
+height: 34.76px;
+
+background: #7ECF59;
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* login */
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 11.0829px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+transform: rotate(-0.28deg);
+
+
+}
+
+.forget{
+    /* Forgot password? */
+z-index: 1;
+position: absolute;
+width: 101px;
+height: 10px;
+left: 312.67px;
+top: 381.86px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+}
+
+.sign{
+    /* don’t you have an account ? sign up here */
+z-index: 1;
+position: absolute;
+width: 224px;
+height: 10px;
+left: 310px;
+top: 418.09px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+transform: rotate(-0.28deg);
+
+}
+.sup{
+    color: #7ED359;
+    text-decoration: none;
+}
+
+.slogan{
+    /* Your Financial Freedom Begins */
+z-index: 1;
+position: absolute;
+width: 244.33px;
+height: 48px;
+left: 20.07px;
+top: 89.59px;
+
+}
+
+.pic{ 
+z-index: index 1; ;  
+position: absolute;
+width: 388.41px;
+height: 388.41px;
+left: -19.21px;
+top: 12.69%;
+top: 136.17px;
+
+background: url(sign_up-removebg-preview (1).png);
+filter: drop-shadow(0px 2.01508px 2.01508px rgba(0, 0, 0, 0.25));
+transform: rotate(-0.28deg);
+
+}
+
+button{
+    /* Frame 3 */
+z-index: 1;
+width: 409.06px;
+height: 34.76px;
+left: 307.05px;
+top: 342.08px;
+background: #7ECF59;
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* login */
+
+position: absolute;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 11.0829px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+border: #fff;
+transform: rotate(-0.28deg);
+
+}

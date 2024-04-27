@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body{
+position: relative;
+width: 800px;
+height: 600px;
+top: 55px;
+left: 400px ;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #7ED359;
+background-blend-mode: normal, darken;
+box-shadow: 7px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.whiteREctangle{   
+/* Rectangle 33 */
+align-items: center; /* Center vertically */
+justify-content: center;
+position: absolute;
+width: 517.62px;
+height: 599px;
+left: 281.81px;
+top: 3.36px;
+
+background: #FFFFFF;
+border-radius: 20.1508px 0px 0px 20.1508px;
+transform: rotate(-0.28deg);
+
+}
+
+.blobs{
+z-index: ;
+align-items: center; /* Center vertically */
+justify-content: center;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 1px;
+top: 2.59px;
+}
+
+h1{
+align-items: center; /* Center vertically */
+justify-content: center;
+z-index: 1;
+position: absolute;
+width: 300px;
+height: 25px;
+left: 453px;
+top: 122.59px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 20.1508px;
+line-height: 25px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+transform: rotate(-0.28deg);
+
+}
+
+.FnameInput{
+/* input field */
+
+box-sizing: border-box;
+z-index: 1;
+position: absolute;
+width: 177.33px;
+height: 32.24px;
+left: 307.28px;
+top: 206.07px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+}
+
+.firstname{
+    
+/* Frame 2 */
+z-index: 1;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5.03769px;
+gap: 4.03px;
+
+position: absolute;
+width: 86.08px;
+height: 20.08px;
+left: 313.78px;
+top: 195.96px;
+
+background: #FFFFFF;
+transform: rotate(-0.28deg);
+z-index: 2;
+/* first Name */
+
+width: 76px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.mail{
+ /* Frame 2 */
+z-index: 1;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5.03769px 18.1357px;
+
+position: absolute;
+width: 37.19px;
+height: 20.08px;
+left: 321.34px;
+top: 241.26px;
+
+background: #FFFFFF;
+transform: rotate(-0.28deg);
+z-index: 2;
+/* Email */
+
+width: 29px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.mailInput{
+ /* input field */
+z-index: 1;
+box-sizing: border-box;
+
+position: absolute;
+width: 409.06px;
+height: 32.24px;
+left: 307.5px;
+top: 251.41px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+}
+.passwordInput{
+z-index: 1;
+/* input field */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 409.06px;
+height: 32.24px;
+left: 307.72px;
+top: 296.75px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+}
+
+.password{
+z-index: 1;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Frame 2 */
+z-index: 2;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5.03769px 18.1357px;
+gap: 7.56px;
+
+position: absolute;
+width: 57.93px;
+height: 20.08px;
+left: 316.74px;
+top: 286.63px;
+
+background: #FFFFFF;
+transform: rotate(-0.28deg);
+
+z-index: 2;
+/* Password */
+
+width: 52px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+;
+
+
+}
+
+.LnameInput{
+/* input field */
+z-index: 1;
+box-sizing: border-box;
+
+position: absolute;
+width: 177.33px;
+height: 32.24px;
+left: 539.01px;
+top: 204.94px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.5);
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+}
+
+.lastname{
+    z-index: 1;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Frame 2 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5.03769px;
+    gap: 4.03px;
+    
+    position: absolute;
+    width: 83.08px;
+    height: 20.08px;
+    left: 545.51px;
+    top: 193.83px;
+    
+    background: #FFFFFF;
+    transform: rotate(-0.28deg);
+    /* last Name */
+z-index: 2;
+width: 73px;
+height: 10px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+
+transform: rotate(-0.28deg);
+
+
+}
+
+.create{
+/* Button */
+z-index: 1;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 5.04px;
+
+position: absolute;
+width: 409.06px;
+height: 34.76px;
+left: 307.95px;
+top: 342.08px;
+
+transform: rotate(-0.28deg);
+/* Frame 3 */
+
+width: 409.06px;
+height: 34.76px;
+
+background: #7ECF59;
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* create account */
+
+position: absolute;
+width: 100;
+height: 100;
+
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 11.0829px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.14em;
+text-transform: uppercase;
+border: #FFFFFF;
+color: #FFFFFF;
+
+transform: rotate(-0.28deg);
+
+
+}
+
+.sign{
+    /* don’t you have an account ? sign up here */
+z-index: 1;
+position: absolute;
+width: 224px;
+height: 10px;
+left: 312.67px;
+top: 381.86px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+transform: rotate(-0.28deg);
+
+}
+
+.log{
+    color: #7ECF59;
+    text-decoration: none;
+}
+
+.or{
+    /* Or */
+
+position: absolute;
+width: 13px;
+height: 10px;
+left: 506.29px;
+top: 410.68px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 8.0603px;
+line-height: 10px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+transform: rotate(-0.28deg);
+
+}
+
+.slogan{
+    /* Your Financial Freedom Begins */
+z-index: 1;
+position: absolute;
+width: 244.33px;
+height: 48px;
+left: 20.07px;
+top: 89.59px;
+
+}
+
+.pic{ 
+z-index: index 1; ;  
+position: absolute;
+width: 388.41px;
+height: 388.41px;
+left: -19.21px;
+top: 12.69%;
+top: 136.17px;
+
+background: url(sign_up-removebg-preview (1).png);
+filter: drop-shadow(0px 2.01508px 2.01508px rgba(0, 0, 0, 0.25));
+transform: rotate(-0.28deg);
+
+}
+
+.line1{
+    /* Line 1 */
+z-index: 1;
+position: absolute;
+width: 186.91px;
+height: 0px;
+left: 303.31px;
+top: 424.73px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.25);
+transform: rotate(-0.28deg);
+
+}
+
+.line2{
+    /* Line 2 */
+z-index: 1;
+position: absolute;
+width: 186.91px;
+height: 0px;
+left: 535.04px;
+top: 423.6px;
+
+border: 0.503769px solid rgba(0, 0, 0, 0.25);
+transform: rotate(-0.28deg);
+
+}
+
+.fcb{
+    /* input field */
+z-index: 1;
+position: absolute;
+width: 177.33px;
+height: 32.24px;
+left: 308.45px;
+top: 444.35px;
+
+transform: rotate(-0.28deg);
+background: #ffffff;
+border-radius: 4.03015px;
+transform: rotate(-0.28deg);
+
+/* sign up with Facebook */
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 7.05277px;
+line-height: 9px;
+/* identical to box height */
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.5);
+border: 1px solid rgba(0, 0, 0, 0.5); /* Black border with 0.5 opacity */
+
+transform: rotate(-0.28deg);
+
+}
+
+.fcbicon{
+    /* Social Media / Facebook */
+z-index: 1;
+position: absolute;
+width: 20.15px;
+height: 20.15px;
+left: 318.45px;
+top: 450.35px;
+
+
+border-radius: 18.6395px;
+transform: rotate(-0.28deg);
+
+}
+
+.mailButton{
+    /* input field */
+    z-index: 1;
+    position: absolute;
+    width: 177.33px;
+    height: 32.24px;
+    left: 540.18px;
+    top: 443.22px;
+    
+    transform: rotate(-0.28deg);
+    background: #ffffff;
+    border-radius: 4.03015px;
+    transform: rotate(-0.28deg);
+    
+    /* sign up with Email */
+    
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.05277px;
+    line-height: 9px;
+    /* identical to box height */
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Black border with 0.5 opacity */
+    
+    transform: rotate(-0.28deg);
+}
+.gmicon{
+/* Social Media / Gmail */
+z-index: 1;
+position: absolute;
+width: 20.15px;
+height: 20.15px;
+left: 558.44px;
+top: 450.11px;
+
+transform: rotate(-0.28deg);
+
+}
+
