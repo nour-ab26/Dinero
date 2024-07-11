@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: black;
+    justify-content: center;
+    
+}
+
+.panel {
+position: absolute;
+justify-items: center;
+align-items: center;
+top: 20px; left: 0; bottom: 0; right: 0;
+
+}
+
+.pannel{
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    display: block;
+    top: 20px;
+    left: auto;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+/*nav {
+    position: absolute;
+    justify-items: center;
+    left: 2.3%;
+    top: 13%;
+    display: flex;
+    flex-direction: column;
+    width: 60px; 
+    padding: 0px;
+    
+/*
+
+nav a {
+    padding: 10px;
+    margin: 4px 10;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+}*/
+
+span.shadow{
+    left: 2.3%;
+    top: 100px;
+}
+.home{
+z-index: 2;
+position: absolute;
+left: 2.8%;
+top: 13%;
+bottom: 83.2%;
+border-radius: 3px;
+}
+.home:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 10px;
+    transition: 5s;
+}
+
+.home:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.transactions {
+    z-index: 1;
+  
+    
+    position: absolute;
+    width: 31.69px;
+    height: 32.5px;
+    left: 2.8%;
+    top: 22%;
+    
+    }
+    .transactions:active{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 90px;
+        height: fit-content;
+        background: #D9D9D9;
+        border-radius: 10px;
+        transition: 5s;
+    }
+    
+.transactions:hover{
+        
+        background-blend-mode: color-dodge ;
+        width: 50px;
+        left: 2%;
+        height: fit-content;
+        border-radius: 10px;
+    }    
+
+
+.budget{
+z-index: 1;
+
+
+position: absolute;
+width: 34.12px;
+height: 33.31px;
+left: 2.8%;
+top: 31%;
+
+
+}
+.budget:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.budget:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+.goal{
+z-index: 1;
+
+
+position: absolute;
+width: 31.69px;
+height: 31.69px;
+left: 2.8%;
+top: 40%;
+
+
+}
+.goal:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.goal:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+
+
+.bill{
+z-index: 1;
+position: absolute;
+width: 27.62px;
+height: 34.12px;
+left: 2.8%;
+top: 49%;
+}
+
+.bill:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.bill:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.dashboard{
+    z-index: 1;
+     
+  position: absolute;
+  width: 33.31px;
+  height: 33.31px;
+  left: 2.8%;
+  top: 58%;
+  }
+
+  .dashboard:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.dashboard:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+
+  .user{
+    z-index: 1;
+    
+    
+    position: absolute;
+    width: 33.5px;
+    height: 34.12px;
+    left:2.8%;
+    top: 67%;
+    }
+    .user:active{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 90px;
+        height: fit-content;
+        background: #D9D9D9;
+        border-radius: 40px;
+        transition: 5s;
+    }
+    
+    .user:hover{
+        
+        background-blend-mode: color-dodge ;
+        width: 50px;
+        left: 2%;
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+  
+.settings{
+z-index: 1;
+
+
+position: absolute;
+width: 30.88px;
+height: 30.88px;
+left: 2.8%;
+top: 76%;
+
+
+}
+
+.settings:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.settings:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+.logout{
+    z-index: 1;
+    
+
+position: absolute;
+width: 30.88px;
+height: 27.62px;
+left: 2.8%;
+top: 85%;
+
+
+    }
+
+.logout:active{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 90px;
+    height: fit-content;
+    background: #D9D9D9;
+    border-radius: 40px;
+    transition: 5s;
+}
+
+.logout:hover{
+    
+    background-blend-mode: color-dodge ;
+    width: 50px;
+    left: 2%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* _____________________________________________________________*/
+
+
+
+
+.rectangleWAllet{
+position: absolute;
+justify-items: center;
+align-items: center;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 7rem;
+width: 470px;
+height: 340px;
+left: 144px;
+top: 20px;
+
+}
+
+.vectorWallet{
+z-index: 1;
+position: absolute;
+width: 309px;
+height: 300px;
+left: 235px;
+top: 30px;
+
+background: rgba(148, 226, 55, 0.5);
+filter: blur(97.20px);
+
+}
+
+.wallet{
+z-index: 2;
+position: absolute;
+width: 154px;
+height: 154px;
+left: 170px;
+top: 74px;
+}
+
+h1{
+z-index: 2;
+position: absolute;
+width: 337px;
+height: 50px;
+left: 191px;
+top: 208px;
+
+font-family:"Outfit";
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 50px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.walletMoney{
+
+position: absolute;
+width: 267px;
+height: 81px;
+left: 191px;
+top: 250px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 50px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #D4EDB6;
+}
+
+.rectangleBank{
+justify-items: center;
+align-items: center;
+position: absolute;
+width: 798px;
+height: 340px;
+left: 664px;
+top: 20px;
+
+background: rgba(45, 47, 44, 0.8);
+border-radius: 20px;
+}
+
+.bank{
+z-index: 2;
+position: absolute;
+justify-items: center;
+align-items: center;
+width: 272px;
+height: 272px;
+left: 1136px;
+top: 57px;
+
+
+}
+
+.vectorbank{
+z-index: 1;
+position: absolute;
+justify-items: center;
+align-items: center;
+width: 379px;
+height: 300px;
+left: 969px;
+top: 30px;
+
+background: rgba(148, 226, 55, 0.5);
+filter: blur(97.20px);
+
+}
+
+.NewWallet{
+z-index: 2;
+position: absolute;
+justify-items: center;
+align-items: center;
+width: 361px;
+height: 84px;
+left: 705px;
+top: 100px;
+
+/* Subheader */
+font-family: 'Outfit';
+font-style: normal;
+color: #000000;
+font-weight: 700;
+font-size: 20px;
+line-height: 32px;
+
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+background: #FFFFFF;
+border: #FFFFFF;
+border-radius: 60px;
+
+}
+
+.bankacc{
+z-index: 2;
+position: absolute;
+width: 361px;
+height: 84px;
+left: 705px;
+top: 228px;
+
+background: #FFFFFF;
+border: #FFFFFF;
+border-radius: 60px;
+
+/* Subheader */
+font-family: 'Outfit';
+font-style: normal;
+color: #000000;
+font-weight: 700;
+font-size: 20px;
+line-height: 32px;
+
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+background: #FFFFFF;
+border: #FFFFFF;
+border-radius: 60px;
+}
+
+.vectorOverView{
+
+position: absolute;
+gap: 7rem;
+width: 779px;
+height: 512px;
+left: 0px;
+top: 250px;
+
+}
+
+h2{
+z-index: 1;
+position: absolute;
+width: 254px;
+height: 50px;
+left: 290px;
+top: 361px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 50px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.rectangleOverview{
+z-index: 1;
+position: absolute;
+width: 368px;
+height: 21px;
+left: 195px;
+top: 569px;
+
+background: #E9F5DA;
+border-radius: 5px;
+
+}
+
+.date{
+z-index: 1;
+position: absolute;
+width: 368px;
+height: 21px;
+left: 207px;
+top: 555px;
+ 
+}
+.arrowRight{
+z-index: 1;
+position: absolute;
+left: 570px;
+top: 569px;
+bottom: 22.17%;
+
+}
+
+.arrowLeft{
+z-index: 1;
+position: absolute;
+left: 166px;
+top: 569px;
+bottom: 22.17%;
+}
+
+.calendar{
+z-index: 2;
+position: absolute;
+left: 538px;
+top: 570px;
+bottom: 22.46%;
+
+
+}
+
+.balance{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 21px;
+left: 164px;
+top: 449px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+}
+
+.numbalance{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 38px;
+left: 164px;
+top: 470px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.93);
+
+
+}
+
+.change{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 42px;
+left: 399px;
+top: 443px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+
+}
+
+.numchange{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 38px;
+left: 399px;
+top: 470px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.93);
+   
+}
+
+.expense{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 42px;
+left: 164px;
+top: 590px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;
+
+}
+
+.numexpense{
+
+position: absolute;
+width: 200px;
+height: 38px;
+left: 164px;
+top: 627px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.93);
+
+
+}
+
+.income{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 42px;
+left: 399px;
+top: 590px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: #000000;    
+}
+
+.numincome{
+z-index: 2;
+position: absolute;
+width: 200px;
+height: 42px;
+left: 399px;
+top: 627px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+
+color: rgba(0, 0, 0, 0.93);   
+}
+
+.graph{
+
+position: absolute;
+width: 798px;
+height: 360px;
+left: 664px;
+top: 376px;
+
+
+}

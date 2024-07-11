@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <form>
+    <form action="/signUp" method="post"> 
         <h1>Create account</h1>
-        <label class="firstname" >Full Name</label>
+        <label class="firstname" >First Name</label>
         <input type="text" class="FnameInput" name="firstName">
         <label class="lastname">Last Name</label>
         <input type="text" class="LnameInput" name="lastName">
@@ -21,7 +21,7 @@
         <input type="email" class="mailInput" name="email">
         <label class="password">Password</label>
         <input type="password" class="passwordInput" name="password">
-        <button class="create">Create Account</button>
+        <button class="create" type="submit">Create Account</button>
         <p class="sign">Already have an account ? <a href="/login" class="log" >Login</a></p>
         <img src="Images/blobs.png" alt="logo" class="blobs" />
         <img src="Images/Line 1.png" alt="line" class="line1">
