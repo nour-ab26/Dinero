@@ -17,7 +17,7 @@ Our web application helps users manage their finances more effectively by provid
 
 # Technologies Used
 - Frontend: ejs and CSS
-- Backend: Node.js , express.js 
+- Backend: Node.js 
 - Database: MongoDB (In progress)
 
 
