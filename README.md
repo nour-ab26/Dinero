@@ -7,7 +7,7 @@ Welcome to **Dinero**, your all-in-one solution for managing personal finances w
 ## 🚀 Demo
 
 🎬 **See it in action:**  
-[▶️ Watch the Demo Video](media\Dinero_demo.mp4)
+[▶️ Watch the Demo Video](media/Dinero_demo.mp4)
 
 ---
 
@@ -43,22 +43,5 @@ With a simple interface and powerful features, Dinero is perfect for anyone look
 - **Backend**: Node.js + Express.js  *(Work in progress)*
 - **Database**: MongoDB *(Work in progress)*
 
----
 
-## 📂 Folder Structure
-
-├── .cph/ # Code snippets or configuration (optional use) 
-├── media/ # Demo video and media files 
-├── public/ # Static files (CSS, JS, images, etc.) 
-├── views/ # EJS templates for frontend 
-├── .gitattributes # Git settings 
-├── .gitignore # Files to ignore in Git 
-├── app.js # Main server file 
-├── package-lock.json # NPM lock file 
-├── package.json # Project metadata and dependencies 
-├── passport_config.js # Passport.js configuration 
-└── README.md # Project documentation
-
-
----
 
