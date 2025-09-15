@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Sensitive Files - VERY IMPORTANT
+.env
+*.env
+instance/
+config.py 
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Flask
+*.sqlite
+*.db
+
+# Windows
+Thumbs.db

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Dinero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_style.css') }}">
+</head>
+<body>
+    <!-- ONBOARDING MODAL -->
+    {% if not current_user.onboarding_complete %}
+    <div class="modal-backdrop">
+        <div class="modal-content">
+            <h1>MORE ABOUT YOU !</h1>
+            <form class="onboarding-form" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.gender.label }}
+                    {{ form.gender() }}
+                </div>
+                <div class="form-group">
+                    {{ form.job_title.label }}
+                    {{ form.job_title() }}
+                </div>
+                <div class="form-group">
+                    {{ form.monthly_income.label }}
+                    {{ form.monthly_income() }}
+                </div>
+                <div class="form-group">
+                    {{ form.tracking_period.label }}
+                    {{ form.tracking_period() }}
+                </div>
+                <div class="form-group">
+                    {{ form.main_goal.label }}
+                    {{ form.main_goal() }}
+                </div>
+                {{ form.submit(class='btn-submit') }}
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    <!-- END ONBOARDING MODAL -->
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">D</div>
+                <span>DINERO</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <img src="{{ url_for('static', filename='images/icon-home.png') }}" alt="Home">
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-cash.png') }}" alt="Transactions">
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-scale.png') }}" alt="Balance">
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-target.png') }}" alt="Goals">
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-doc.png') }}" alt="Bills">
+                </a>
+                 <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-chart.png') }}" alt="Analysis">
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-user.png') }}" alt="Profile">
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                     <img src="{{ url_for('static', filename='images/icon-settings.png') }}" alt="Settings">
+                </a>
+                <a href="{{ url_for('main.logout') }}" class="nav-item">
+                    <img src="{{ url_for('static', filename='images/icon-logout.png') }}" alt="Logout">
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>HOME</h1>
+            </header>
+            <div class="content-grid">
+                <div class="card wallet-card">
+                    <img src="{{ url_for('static', filename='images/wallet.png') }}" alt="Wallet">
+                    <h2>CASH WALLET</h2>
+                    <p>0.000 TND</p>
+                </div>
+
+                <div class="card actions-card">
+                     <img src="{{ url_for('static', filename='images/Bank.png') }}" alt="Bank" class="bank-icon">
+                    <button class="action-btn">ADD A NEW WALLET</button>
+                    <button class="action-btn">ADD A BANK ACCOUNT</button>
+                </div>
+
+                <div class="card overview-card">
+                    <h2>OVERVIEW</h2>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <span>TOTAL BALANCE</span>
+                            <p>0.00 TND</p>
+                        </div>
+                        <div class="overview-item">
+                            <span>TOTAL PERIOD CHANGE</span>
+                            <p>0.00 TND</p>
+                        </div>
+                        <div class="overview-item">
+                            <span>TOTAL PERIOD EXPENSES</span>
+                            <p>0.00 TND</p>
+                        </div>
+                        <div class="overview-item">
+                            <span>TOTAL PERIOD INCOME</span>
+                            <p>0.00 TND</p>
+                        </div>
+                    </div>
+                     <div class="date-selector">
+                        <span>May/1/2024 - May/30/2024</span>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <div class="chart-header">
+                        <h2>EXPENSES DIAGRAM</h2>
+                        <span class="chart-timespan">THIS WEEK</span>
+                    </div>
+                    <div class="chart-placeholder">
+                        <!-- Chart would be rendered here -->
+                        <div class="chart-labels">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wen</span>
+                            <span>The</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

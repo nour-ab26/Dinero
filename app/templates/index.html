@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="main-container">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Dinero</div>
+        <nav class="navigation">
+            <a href="#">About</a>
+            <a href="#">Tracking</a>
+            <a href="#">Contact</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Master Your Finances With Ease</h1>
+            <p>Dinero is a seamless solution for managing your income and expenses. From budgeting to savings goals, take charge of your finances and pave the way towards a brighter financial future.</p>
+            <div class="hero-buttons">
+                 <a href="{{ url_for('main.signup') }}" class="btn btn-primary">SIGN UP</a>
+                 <a href="{{ url_for('main.login') }}" class="btn btn-secondary">LOG IN</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- You can replace this with an actual image -->
+            <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="Financial tools">
+        </div>
+    </section>
+
+    <!-- Feature Section 1 -->
+    <section class="feature-section">
+        <div class="feature-image">
+             <img src="{{ url_for('static', filename='images/income-tracking.png') }}" alt="Income Tracking">
+        </div>
+        <div class="feature-content">
+            <h2>Let's Simplify Your Finances With Effortless Income Tracking</h2>
+            <p>Unlock how our platform simplifies financial tracking. Effortlessly monitor your income streams, budgets, and investments, all in one place, empowering you to take control of your finances with ease.</p>
+        </div>
+    </section>
+
+    <!-- Feature Section 2 -->
+    <section class="feature-section reverse">
+        <div class="feature-content">
+            <h2>Discover Your Financial Destiny And Let's Achieve Your Goals Together!!</h2>
+            <p>Through our app, we facilitate goal-setting, providing intuitive tools to define and track your financial objectives. Receive timely alerts to keep you on track and celebrate your milestones with symbolic rewards upon achieving your goals!</p>
+        </div>
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='images/goal-tracking.png') }}" alt="Goal Achievement">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <p class="subheading">TESTIMONIALS</p>
+        <h2>Read What Others Have To Say</h2>
+        <div class="testimonial-cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/Emily.png') }}" alt="Emily Williams" class="testimonial-avatar">
+                <h3>EMILY WILLIAMS</h3>
+                <p>"Dinero has revolutionized how I manage my finances. The intuitive interface and powerful features make it easy to track my spending and set realistic budgets. Highly recommended!"</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/michael.png') }}" alt="Michael Johnson" class="testimonial-avatar">
+                <h3>MICHAEL JOHNSON</h3>
+                <p>"I've tried several finance apps, but Dinero stands out. The goal-setting feature is a game-changer, and the detailed analysis helps me make smarter financial decisions."</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/john.png') }}" alt="John Smith" class="testimonial-avatar">
+                <h3>JOHN SMITH</h3>
+                <p>"As a freelancer, tracking my income and expenses used to be a hassle. Dinero simplifies everything, and I can now see a clear picture of my financial health at a glance."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <p>ARE YOU READY?</p>
+            <h2>Transform Your Finances Today With Our App</h2>
+            <a href="#" class="btn btn-dark">DOWNLOAD NOW</a>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-logo">DINERO</div>
+    <div class="footer-links">
+        <div>
+            <h4>CONTACT US</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>ACCOUNT</h4>
+            <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>RESOURCES</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% endblock %}

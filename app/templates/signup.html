@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Dinero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth_style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left-panel">
+            <div class="panel-content">
+                <h1>Your Financial Freedom Begins</h1>
+                <img src="{{ url_for('static', filename='images/auth-image.png') }}" alt="Financial Freedom">
+            </div>
+        </div>
+        <div class="auth-right-panel">
+            <div class="form-container">
+                <h2>CREATE ACCOUNT</h2>
+                <!-- START: ADD THIS ERROR DISPLAY BLOCK -->
+                {% if form.errors %}
+                      <div class="form-errors">
+                         <strong>Error!</strong> Please correct the issues below:
+                         <ul>
+                          {% for field, errors in form.errors.items() %}
+                             <li>{{ form[field].label.text }}: {{ errors|join(', ') }}</li>
+                          {% endfor %}
+                         </ul>
+                      </div>
+                {% endif %}
+                <!-- END: ADD THIS ERROR DISPLAY BLOCK -->
+                <form action="" method="post" novalidate>
+                    {{ form.hidden_tag() }}
+                    <div class="name-fields">
+                        <div class="input-group">
+                            {{ form.first_name.label }}
+                            {{ form.first_name(size=32) }}
+                            {% for error in form.first_name.errors %}
+                            <span class="error-message">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="input-group">
+                            {{ form.last_name.label }}
+                            {{ form.last_name(size=32) }}
+                            {% for error in form.last_name.errors %}
+                            <span class="error-message">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        {{ form.email.label }}
+                        {{ form.email(size=64) }}
+                        {% for error in form.email.errors %}
+                        <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="input-group">
+                        {{ form.password.label }}
+                        {{ form.password(size=32) }}
+                        {% for error in form.password.errors %}
+                        <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="input-group">
+                       {{ form.password2.label }}
+                       {{ form.password2(size=32) }}
+                       {% for error in form.password2.errors %}
+                       <span class="error-message">{{ error }}</span>
+                       {% endfor %}
+                    </div>
+                    <div class="input-group">
+                        <p>{{ form.submit(class='btn-submit') }}</p>
+                    </div>
+                </form>
+                <p class="form-footer-text">ALREADY HAVE AN ACCOUNT? <a href="{{ url_for('main.login') }}">LOGIN</a></p>
+                <div class="divider">OR</div>
+                <div class="social-login">
+                    <a href="#" class="social-btn facebook">SIGN UP WITH FACEBOOK</a>
+                    <a href="#" class="social-btn google">SIGN UP WITH EMAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
