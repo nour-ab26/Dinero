@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, DecimalField, TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, DecimalField, TextAreaField, HiddenField
 from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Optional, NumberRange
 from app.models import User
 
@@ -29,3 +29,18 @@ class OnboardingForm(FlaskForm):
     tracking_period = SelectField('Tracking Per', choices=[('Weekly', 'Weekly'), ('Monthly', 'Monthly')], validators=[DataRequired()])
     main_goal = TextAreaField('Goal of using the app', validators=[DataRequired()])
     submit = SubmitField('Submit')
+    
+class CreateGoalForm(FlaskForm):
+    name = StringField('What is your goal', validators=[DataRequired()])
+    target_amount = DecimalField('Amount needed', places=2, validators=[
+        DataRequired(), NumberRange(min=1, message="Amount must be positive.")
+    ])
+    submit_create_goal = SubmitField('Submit')
+
+
+class AddToGoalForm(FlaskForm):
+    amount = DecimalField('Amount', places=2, validators=[
+        DataRequired(), NumberRange(min=0.01, message="Amount must be positive.")
+    ])
+    goal_id = HiddenField() # This will be set by JavaScript
+    submit_add_to_goal = SubmitField('Submit')

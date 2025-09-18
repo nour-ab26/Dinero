@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Dinero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_style.css') }}">
+</head>
+<body>
+    <!-- Onboarding Modal - can live in the base layout -->
+    {% if not current_user.onboarding_complete %}
+    <div class="modal-backdrop">
+        <!-- ... (your existing onboarding modal code) ... -->
+    </div>
+    {% endif %}
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation - DEFINED ONCE -->
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="logo">D</div></div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('main.dashboard') }}" class="nav-item {% if active_page == 'dashboard' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-home.svg') }}" alt="Home">
+                </a>
+                <a href="#" class="nav-item {% if active_page == 'balance' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-scale.svg') }}" alt="Balance">
+                </a>
+                <a href="{{ url_for('main.goals') }}" class="nav-item {% if active_page == 'goals' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-target.svg') }}" alt="Goals">
+                </a>
+                <a href="#" class="nav-item {% if active_page == 'bills' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-doc.svg') }}" alt="Bills">
+                </a>
+                <a href="#" class="nav-item {% if active_page == 'analysis' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-chart.svg') }}" alt="Analysis">
+                </a>
+                <a href="#" class="nav-item {% if active_page == 'profile' %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='images/icon-user.svg') }}" alt="Profile">
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-settings.svg') }}" alt="Settings"></a>
+                <a href="{{ url_for('main.logout') }}" class="nav-item"><img src="{{ url_for('static', filename='images/icon-logout.svg') }}" alt="Logout"></a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- This block will be replaced by child templates -->
+            {% block dashboard_content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- JavaScript can also live here if it's shared -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>

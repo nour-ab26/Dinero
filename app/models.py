@@ -13,9 +13,13 @@ class User(UserMixin, db.Model):
     last_name = db.Column(db.String(64))
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    
     incomes = db.relationship('Income', backref='author', lazy='dynamic')
     expenses = db.relationship('Expense', backref='author', lazy='dynamic')
 
+
+    goals = db.relationship('Goal', backref='author', lazy='dynamic')    
+    
     gender = db.Column(db.String(30), nullable=True)
     job_title = db.Column(db.String(100), nullable=True)
     monthly_income = db.Column(db.Numeric(10, 2), nullable=True)
@@ -76,9 +80,15 @@ class Budget(db.Model):
 class Goal(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
-    target_amount = db.Column(db.Float)
-    current_amount = db.Column(db.Float, default=0.0)
+    target_amount = db.Column(db.Numeric(10, 2))
+    current_amount = db.Column(db.Numeric(10, 2), default=0.0)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    @property
+    def progress_percent(self):
+        if self.target_amount > 0:
+            return (self.current_amount / self.target_amount) * 100
+        return 0
 
     def __repr__(self):
         return '<Goal {}>'.format(self.name)

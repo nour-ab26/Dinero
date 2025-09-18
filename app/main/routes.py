@@ -1,7 +1,7 @@
 from app.main import bp
 from flask import render_template, flash, redirect, url_for
-from app.main.forms import LoginForm, RegistrationForm, OnboardingForm
-from app.models import User
+from app.main.forms import LoginForm, RegistrationForm, OnboardingForm, CreateGoalForm, AddToGoalForm
+from app.models import User, Goal
 from app import db
 from flask_login import current_user, login_user, logout_user, login_required
 
@@ -62,3 +62,38 @@ def dashboard():
         return redirect(url_for('main.dashboard'))
     
     return render_template('dashboard.html', title='Dashboard', form=form)
+
+@bp.route('/goals', methods=['GET', 'POST'])
+@login_required
+def goals():
+    create_form = CreateGoalForm()
+    add_form = AddToGoalForm()
+
+    # Handle the "Create Goal" form submission
+    if create_form.submit_create_goal.data and create_form.validate_on_submit():
+        new_goal = Goal(
+            name=create_form.name.data,
+            target_amount=create_form.target_amount.data,
+            author=current_user
+        )
+        db.session.add(new_goal)
+        db.session.commit()
+        flash('Your new goal has been created!')
+        return redirect(url_for('main.goals'))
+
+    # Handle the "Add to Goal" form submission
+    if add_form.submit_add_to_goal.data and add_form.validate_on_submit():
+        goal = Goal.query.filter_by(id=add_form.goal_id.data, user_id=current_user.id).first_or_404()
+        goal.current_amount += add_form.amount.data
+        db.session.commit()
+        flash(f'Successfully added to your goal: {goal.name}!')
+        return redirect(url_for('main.goals'))
+
+    user_goals = Goal.query.filter_by(author=current_user).order_by(Goal.id.asc()).all()
+    return render_template(
+        'goals.html',
+        title='Goals',
+        user_goals=user_goals,
+        create_form=create_form,
+        add_form=add_form
+    )

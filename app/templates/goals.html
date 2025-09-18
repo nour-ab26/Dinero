@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Dinero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_style.css') }}">
+</head>
+<body>
+    <!-- Create Goal Modal -->
+    <div id="createGoalModal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content goal-modal">
+            <span class="close-modal">&times;</span>
+            <h2>CREATE A NEW GOAL</h2>
+            <form method="POST" action="{{ url_for('main.goals') }}" class="goal-form" novalidate>
+                {{ create_form.hidden_tag() }}
+                <div class="form-group">{{ create_form.name.label }} {{ create_form.name() }}</div>
+                <div class="form-group">{{ create_form.target_amount.label }} {{ create_form.target_amount() }}</div>
+                {{ create_form.submit_create_goal(class='btn-submit') }}
+            </form>
+        </div>
+    </div>
+
+    <!-- Add to Goal Modal -->
+    <div id="addAmountModal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content goal-modal">
+            <span class="close-modal">&times;</span>
+            <h2>ADD TO YOUR GOAL</h2>
+            <form method="POST" action="{{ url_for('main.goals') }}" class="goal-form" novalidate>
+                {{ add_form.hidden_tag() }}
+                {{ add_form.goal_id() }} <!-- Hidden field for goal ID -->
+                <div class="form-group">{{ add_form.amount.label }} {{ add_form.amount() }}</div>
+                {{ add_form.submit_add_to_goal(class='btn-submit') }}
+            </form>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (assuming it's similar to dashboard) -->
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="logo">D</div></div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('main.dashboard') }}" class="nav-item"><img src="{{ url_for('static', filename='images/icon-home.svg') }}" alt="Home"></a>
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-scale.svg') }}" alt="Balance"></a>
+                <a href="{{ url_for('main.goals') }}" class="nav-item active"><img src="{{ url_for('static', filename='images/icon-target.svg') }}" alt="Goals"></a>
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-doc.svg') }}" alt="Bills"></a>
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-chart.svg') }}" alt="Analysis"></a>
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-user.svg') }}" alt="Profile"></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item"><img src="{{ url_for('static', filename='images/icon-settings.svg') }}" alt="Settings"></a>
+                <a href="{{ url_for('main.logout') }}" class="nav-item"><img src="{{ url_for('static', filename='images/icon-logout.svg') }}" alt="Logout"></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>GOALS</h1>
+            </header>
+            <div class="goals-grid">
+                <!-- Loop through existing goals -->
+                {% for goal in user_goals %}
+                <div class="card goal-card">
+                    <img src="{{ url_for('static', filename='images/piggy-bank.png') }}" alt="Piggy Bank" class="piggy-bank-icon">
+                    <h3>GOAL {{ loop.index }}: {{ goal.name|upper }}</h3>
+                    <p>Amount Needed: {{ "%.2f"|format(goal.target_amount) }} TND</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: {{ goal.progress_percent }}%;"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>{{ "%.0f"|format(goal.progress_percent) }}%</span>
+                        <span>{{ "%.2f"|format(goal.current_amount) }} TND</span>
+                    </div>
+                    <button class="add-amount-btn" data-goal-id="{{ goal.id }}">Add</button>
+                </div>
+                {% endfor %}
+
+                <!-- Card to create a new goal -->
+                <div class="card create-goal-card" id="createGoalBtn">
+                    <h4>Take Control Of Your Money Today To Shape A Better Financial Future Tomorrow</h4>
+                    <button class="btn-create-new">Create A New Goal</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const createGoalModal = document.getElementById('createGoalModal');
+            const addAmountModal = document.getElementById('addAmountModal');
+            const createGoalBtn = document.getElementById('createGoalBtn');
+            const addAmountBtns = document.querySelectorAll('.add-amount-btn');
+            const closeButtons = document.querySelectorAll('.close-modal');
+
+            // Show "Create Goal" modal
+            createGoalBtn.addEventListener('click', () => {
+                createGoalModal.style.display = 'flex';
+            });
+
+            // Show "Add Amount" modal and set the goal ID
+            addAmountBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const goalId = btn.dataset.goalId;
+                    addAmountModal.querySelector('input[name="goal_id"]').value = goalId;
+                    addAmountModal.style.display = 'flex';
+                });
+            });
+
+            // Close modals
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    createGoalModal.style.display = 'none';
+                    addAmountModal.style.display = 'none';
+                });
+            });
+
+            // Close modals if backdrop is clicked
+            window.addEventListener('click', (event) => {
+                if (event.target === createGoalModal || event.target === addAmountModal) {
+                    createGoalModal.style.display = 'none';
+                    addAmountModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
