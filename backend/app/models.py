@@ -16,9 +16,8 @@ class User(UserMixin, db.Model):
     
     incomes = db.relationship('Income', backref='author', lazy='dynamic')
     expenses = db.relationship('Expense', backref='author', lazy='dynamic')
-
-
-    goals = db.relationship('Goal', backref='author', lazy='dynamic')    
+    goals = db.relationship('Goal', backref='author', lazy='dynamic')   
+    bills = db.relationship('Bill', backref='author', lazy='dynamic') 
     
     gender = db.Column(db.String(30), nullable=True)
     job_title = db.Column(db.String(100), nullable=True)
@@ -59,14 +58,14 @@ class Expense(db.Model):
 
 class Bill(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(140))
-    due_date = db.Column(db.DateTime)
-    amount = db.Column(db.Float)
-    is_paid = db.Column(db.Boolean, default=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    name = db.Column(db.String(140), nullable=False)
+    amount = db.Column(db.Numeric(10, 2), nullable=False)
+    due_date = db.Column(db.Date, nullable=False)
+    is_paid = db.Column(db.Boolean, default=False, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
-        return '<Bill {}>'.format(self.name)
+        return f'<Bill {self.name}>'
 
 class Budget(db.Model):
     id = db.Column(db.Integer, primary_key=True)

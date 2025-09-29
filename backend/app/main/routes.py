@@ -1,10 +1,11 @@
-from flask import request, jsonify
+from flask import request, jsonify, render_template, redirect, url_for, flash
 from app.main import bp
-from app.main.forms import RegistrationForm
-from app.models import User, Goal
+from app.main.forms import RegistrationForm, LoginForm, OnboardingForm, CreateGoalForm, AddToGoalForm
+from app.models import User, Goal, Bill
 from app import db
-from app.schemas import user_schema, goal_schema, goals_schema
+from app.schemas import user_schema, goal_schema, goals_schema, bill_schema, bills_schema
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from flask_login import login_required, current_user, login_user, logout_user
 
 @bp.route('/register', methods=['POST'])
 def register():
@@ -120,3 +121,59 @@ def goals():
         create_form=create_form,
         add_form=add_form
     )
+    
+    
+@bp.route('/bills', methods=['GET'])
+@jwt_required()
+def get_bills():
+    """Get all bills for the current user."""
+    current_user_id = get_jwt_identity()
+    user = User.query.get(current_user_id)
+    # Order by due date so the most urgent are first
+    user_bills = user.bills.order_by(Bill.due_date.asc()).all()
+    return jsonify(bills_schema.dump(user_bills))
+
+@bp.route('/bills', methods=['POST'])
+@jwt_required()
+def create_bill():
+    """Create a new bill."""
+    current_user_id = get_jwt_identity()
+    data = request.get_json()
+
+    try:
+        new_bill = bill_schema.load(data)
+    except Exception as e:
+        return jsonify({"errors": str(e)}), 400
+
+    new_bill.user_id = current_user_id
+    db.session.add(new_bill)
+    db.session.commit()
+    
+    return jsonify(bill_schema.dump(new_bill)), 201
+
+@bp.route('/bills/<int:bill_id>/pay', methods=['PUT'])
+@jwt_required()
+def pay_bill(bill_id):
+    """Mark a specific bill as paid."""
+    current_user_id = get_jwt_identity()
+    bill = Bill.query.filter_by(id=bill_id, user_id=current_user_id).first_or_404()
+
+    if bill.is_paid:
+        return jsonify({"msg": "Bill is already paid."}), 400
+
+    bill.is_paid = True
+    db.session.commit()
+
+    return jsonify(bill_schema.dump(bill))
+
+@bp.route('/bills/<int:bill_id>', methods=['DELETE'])
+@jwt_required()
+def delete_bill(bill_id):
+    """Delete a specific bill."""
+    current_user_id = get_jwt_identity()
+    bill = Bill.query.filter_by(id=bill_id, user_id=current_user_id).first_or_404()
+    
+    db.session.delete(bill)
+    db.session.commit()
+    
+    return '', 204 # 204 No Content is standard for a successful DELETE
