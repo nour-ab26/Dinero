@@ -1,9 +1,32 @@
+from flask import request, jsonify
 from app.main import bp
-from flask import render_template, flash, redirect, url_for
-from app.main.forms import LoginForm, RegistrationForm, OnboardingForm, CreateGoalForm, AddToGoalForm
+from app.main.forms import RegistrationForm
 from app.models import User, Goal
 from app import db
-from flask_login import current_user, login_user, logout_user, login_required
+from app.schemas import user_schema, goal_schema, goals_schema
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+
+@bp.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    user = User.query.filter_by(email=data.get('email')).first()
+    if user:
+        return jsonify({"msg": "Email already exists"}), 400
+
+    user = User(
+        first_name=data.get('first_name'),
+        last_name=data.get('last_name'),
+        email=data.get('email')
+    )
+    user.set_password(data.get('password'))
+    db.session.add(user)
+    db.session.commit()
+    
+    return jsonify({"msg": "User created successfully"}), 201
+
+
+
+
 
 @bp.route('/')
 @bp.route('/index')
